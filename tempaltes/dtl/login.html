@@ -1,0 +1,42 @@
+{% extends 'dtl/base.html' %}
+{% load static %}
+
+{% block title %}login{% endblock %}
+
+
+{% block content %}
+<style>
+    h1 {
+        text-overflow: inherit;
+        color: rgb(224, 14, 14);
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    form {
+        margin: 0px 450px 0px 450px;
+        border: 4px ridge rgb(5, 8, 5);
+        border-radius: 10%;
+    }
+</style>
+
+<h1>USER LOGIN PAGE</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+        <label>User name:-</label>
+        <input type="text" name="username" placeholder="Enter user Id" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Enter User Password:-</label>
+        <input type="password" name="password" placeholder="Enter User security" class="form-control">
+
+    </div>
+    <div class="form-group">
+        <input type="text" value="login" class="btn btn-outline-primary" name="">
+        <a href="{% url 'register' %}" class="btn btn-outline-info ">NEW/Reg</a>
+    </div>
+</form>
+
+{% endblock %}

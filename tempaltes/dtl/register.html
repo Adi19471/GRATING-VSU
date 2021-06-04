@@ -1,0 +1,57 @@
+{% extends 'dtl/base.html' %}
+
+{% block title %}Register page{% endblock %}
+
+{% block content %}
+<style>
+    .container {
+        background-color: rgb(236, 179, 179);
+        width: 500px;
+        margin: 20px -220px 0px 510px;
+        border-radius: 5px;
+        border: 2px double lightgreen;
+        text-align: justify;
+        color: rgb(0, 0, 0);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        heigh:auto;
+        
+    }
+
+    .card-footer {
+        background-color: rgb(224, 16, 207);
+        outline-style: double;
+        padding: 10px;
+        margin:0px 10px 0px 15px
+    }
+
+    .aa {
+        background-color: rgb(29, 58, 28);
+    }
+    form{
+        margin-top: -40px;
+        height: auto;
+    }
+    .id_password1,id_email,id_name{
+        margin-top: 2px;
+    }
+</style>
+<div class="container">
+    <h2> Register page....!!</h2><hr>
+
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <div class="card-footer">
+                <input type="submit" class="btn btn-warning" style="margin-left: 140px;">
+                <a href="{% url 'login' %}" class="btn btn-info" class="aa">Cancel</a>
+            </div>
+        </form>
+    </div>
+
+
+
+
+</div>
+{% endblock %}

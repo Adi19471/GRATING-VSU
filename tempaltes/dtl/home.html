@@ -1,0 +1,65 @@
+{% extends 'dtl/base.html' %}
+
+{% block title %}Home page{% endblock %}
+
+{% block content %}
+<style>
+    h1{
+        margin: 190px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(226, 98, 66);
+        background-color: rgb(194, 194, 194);
+        border-radius: 18px;
+        font-weight: 100;
+        border: 5px ridge rgb(19, 106, 206);
+        text-shadow: 1px 2px  rgb(255, 14, 255);
+        animation-name:example;
+        animation-duration: 5s;
+    }
+    @keyframes example{
+        from {background-color: rgb(19, 106, 206);}
+        to {background-color: brown; color: cyan;font-size: 20px;}
+    }
+    body{
+        background-image: url(https://i.vimeocdn.com/video/808260598_640x360.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        backface-visibility: visible;
+    }
+    .midele ,h3{
+        color: rgb(247, 174, 40);
+        margin-left: 500px;
+        margin-top: -190px;
+        border-color: crimson;
+        
+    }
+    .midele,h2{
+        margin-left: 460px;
+        margin-top: -10px;
+        color: teal;
+        animation-duration: 10s;
+        animation-name: example;
+        margin-right: 540px;
+
+    }
+    @keyframes example{
+        from {background-color: darkblue;background-color: rgb(250, 96, 96);background-color: rgb(204, 219, 189);}
+        to {background-color: rgba(16, 206, 133, 0.815);background-color: rgb(52, 184, 245);background-color: rgb(134, 4, 76);};}
+    }
+</style>
+<div class="container">
+    
+    <h1>ADI NARAYANA REDDY <small>web developer</small></h1>
+    
+</div>
+
+<div class="midile">
+    <h3>Keep With Me  <i class="fas fa-smile"></i></h3>
+    <h2>Django Developer</h2>
+    
+
+</div>
+
+
+
+{% endblock %}

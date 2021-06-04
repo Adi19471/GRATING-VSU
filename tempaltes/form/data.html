@@ -1,0 +1,57 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css'%}">
+    <script type="textjavascript src=" {% static 'js/bootstrap.min.js' %}"></script>
+    <script rel="script" type="javascript" src="{% static 'jquery/jquery.min.js'%}"></script>
+    <title>ENTER DATA</title>
+</head>
+
+<style>
+    form{
+        width: 50%;
+        height: 50%;
+        margin-top: -15px;
+        border:5px ridge royalblue;
+    }
+    body{
+        background-color:rgb(255, 233, 30);
+    }
+    html{
+        scroll-behavior:smooth ;
+    }
+    .adhar{
+        margin-left: 450px;
+        margin-top: -525px;
+        width: 54%;
+</style>
+<body>
+
+    <div class="container">
+        <div class="card-mt30 col-md-12 bg-info">
+            <div class="card-header">
+                <h1 style="text-align: center;">ADHAR DATA</h1>
+            </div>
+        </div>
+        <div class="card-body">
+            <form method="POST">
+                {% csrf_token %}
+                {{form.as_p}}
+
+                <button type="submit" class="btn btn-outline-info" value="Register" name="reg">Register</button>
+                <input type="submit" class="btn btn-outline-primary" name='can' value="cancel">
+
+
+
+            </form>
+            <img src="{% static "images/forms/adhar.jpg" %}" class="adhar">
+        </div>
+    </div>
+</body>
+
+</html>
